@@ -1,0 +1,125 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+
+/*-----------------------------------*\
+  #FONT-FAMILY
+\*-----------------------------------*/
+:root {
+  --ff-roboto: "Roboto", sans-serif;
+}
+
+/*-----------------------------------*\
+  #RESET
+\*-----------------------------------*/
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+}
+
+li {
+  list-style: none;
+}
+
+img,
+ion-icon,
+a,
+button,
+time,
+span {
+  display: block;
+}
+
+button {
+  font: inherit;
+  background: none;
+  border: none;
+  text-align: left;
+  cursor: pointer;
+}
+
+input,
+textarea {
+  display: block;
+  width: 100%;
+  background: none;
+  font: inherit;
+}
+
+html {
+  font-family: var(--ff-roboto);
+}
+
+body {
+  font-style: normal;
+}
+
+/*-----------------------------------*\
+  #Main CSS
+\*-----------------------------------*/
+
+.app-container {
+  display: grid;
+  grid-template-columns: minmax(150px, 20%) minmax(300px, 30%) 1fr;
+  gap: 20px;
+  min-height: 100vh;
+}
+
+.sidebar {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100vh;
+  padding: 20px;
+}
+
+.music-player-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.user-profile img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+@media screen and (width < 1024px) {
+  .app-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto auto;
+    gap: 0 20px;
+    padding: 20px;
+  }
+
+  .sidebar-container {
+    grid-column: span 2;
+  }
+
+  .sidebar {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 0;
+    height: auto;
+  }
+}
+
+@media screen and (width < 640px) {
+  .app-container {
+    grid-template-columns: 1fr;
+  }
+
+  .large-song-list {
+    display: none;
+  }
+}

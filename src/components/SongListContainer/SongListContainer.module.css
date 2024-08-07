@@ -1,0 +1,22 @@
+.songListContainer {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 30px 0 15px 0;
+}
+
+.menuContainer {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.menuContainer button {
+  font-size: 22px;
+  color: rgb(255, 255, 255, 40%);
+}
+
+.menuContainer .activeMenu {
+  color: rgb(255, 255, 255, 1);
+}

@@ -1,0 +1,15 @@
+.input {
+  border: none;
+  outline: none;
+  color: #ffffff66;
+  font-size: 18px;
+}
+
+.searchInputContainer {
+  display: flex;
+  padding: 8px 16px 8px 16px;
+  color: #ffffff66;
+  background-color: #ffffff14;
+  border-radius: 8px;
+  width: 100%;
+}

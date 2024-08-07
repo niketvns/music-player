@@ -1,0 +1,128 @@
+.musicPlayer {
+  height: 100%;
+  overflow-y: auto;
+  color: white;
+  display: grid;
+  place-content: center;
+  gap: 20px;
+}
+
+.artistName {
+  font-size: 16px;
+  color: rgba(255, 255, 255, 60%);
+}
+
+.musicBanner {
+  width: 100%;
+  max-width: 400px;
+  aspect-ratio: 1/1;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.player {
+  color: white;
+}
+
+.playerControls {
+  padding-block: 20px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.mainControl {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.controlIcon {
+  color: rgba(255, 255, 255, 60%);
+  font-size: 30px;
+}
+
+.threeDotContainer,
+.volumeContainer,
+.playPauseContainer {
+  background-color: rgba(255, 255, 255, 20%);
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+}
+
+.volumeContainer .controlIcon,
+.playPauseContainer .controlIcon {
+  font-size: 20px;
+}
+
+.volumeContainer .controlIcon {
+  color: white;
+}
+
+.playPauseContainer {
+  background-color: #fff;
+}
+
+.playPauseContainer .controlIcon {
+  color: black;
+}
+
+.progressInput {
+  width: 100%;
+  height: 6px;
+  border-radius: 20px;
+  appearance: none;
+  cursor: pointer;
+}
+
+.progressInput::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  height: 15px;
+  width: 15px;
+  background-color: white;
+  border-radius: 50%;
+  border: none;
+  transition: 0.2s ease-in-out;
+}
+
+.progressInput::-moz-range-thumb {
+  height: 15px;
+  width: 15px;
+  background-color: white;
+  border-radius: 50%;
+  border: none;
+  transition: 0.2s ease-in-out;
+}
+
+.smallScreenSongList {
+  visibility: hidden;
+  overflow: hidden;
+  height: 0;
+  opacity: 0.3;
+  z-index: -10;
+  position: fixed;
+  inset: 0;
+  transition: all ease 0.5s;
+  padding: 20px 10px 10px 10px;
+}
+
+.closeButton {
+  color: white;
+  position: absolute;
+  right: 20px;
+  top: 20px;
+}
+
+@media screen and (width < 640px) {
+  .activeList {
+    visibility: visible;
+    opacity: 1;
+    z-index: 10;
+    overflow: visible;
+    height: 100%;
+  }
+}

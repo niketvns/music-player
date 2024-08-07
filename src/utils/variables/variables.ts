@@ -1,0 +1,1 @@
+export const DEFAULT_BG_COLOR = '#0A092F'

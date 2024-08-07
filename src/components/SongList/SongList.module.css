@@ -1,0 +1,39 @@
+.songs {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  overflow: auto;
+}
+
+.songs::-webkit-scrollbar {
+  width: 0;
+}
+
+.coverImage {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.songItem {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: white;
+  padding: 12px 18px;
+  border-radius: 8px;
+}
+
+.activeSong {
+  background-color: rgba(255, 255, 255, 8%);
+}
+
+.details {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}

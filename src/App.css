@@ -96,7 +96,7 @@ body {
   .app-container {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: auto auto;
+    grid-template-rows: 60px 1fr;
     gap: 0 20px;
     padding: 20px;
   }
@@ -112,11 +112,19 @@ body {
     padding: 0;
     height: auto;
   }
+
+  .music-player-container {
+    max-height: 700px;
+  }
 }
 
 @media screen and (width < 640px) {
   .app-container {
     grid-template-columns: 1fr;
+  }
+
+  .music-player-container {
+    grid-column: span 2;
   }
 
   .large-song-list {

@@ -1,30 +1,36 @@
-# React + TypeScript + Vite
+# Music Player App
+This is a responsive music player application built using React JS. It matches the given design and includes a variety of interactive features and animations.
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+# Demo
+You can view a live demo of the application [here](https://beatbox-player.netlify.app/).
 
-Currently, two official plugins are available:
+# Features
+- Responsive Design: Adapts to different screen sizes. On smaller screens, the player component becomes the main interface with a menu button to show a list of songs.
+- REST API Integration: Loads list data from a REST API.
+- Persistent Music Playback: Music continues to play even if the user visits another tab.
+- Dynamic Background Gradient: The background gradient color changes according to the cover image of the currently playing song.
+- Interactive Interface: Includes fluid animations and transitions such as list loading animations and background color change animations.
+- Music Controls: Provides controls for play, pause, next, and previous tracks.
+- Search Functionality: Allows users to search for songs.
+- Tab Switching: Users can switch between different tabs like "For You" and "Top Tracks".
+- Music Seeker Control: Users can control the music playback via a seeker.
+- Dynamic Images: Fetches cover images using the "cover" key from the API.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+# Technologies Used
+- React JS
+- CSS for styling
+- TypeScript
+- JavaScript
+- Vite
 
-## Expanding the ESLint configuration
+# Screenshots
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+## Desktop View
+![image](https://github.com/user-attachments/assets/305331a7-63bf-4ac7-aea8-9069e509ddaa)
 
-- Configure the top-level `parserOptions` property like this:
+## Mobile View
+![image](https://github.com/user-attachments/assets/ddee1344-0076-412a-865e-339da3d17a2a)
 
-```js
-export default {
-  // other rules...
-  parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json', './tsconfig.app.json'],
-    tsconfigRootDir: __dirname,
-  },
-}
-```
+![image](https://github.com/user-attachments/assets/e57a4f11-799f-4dba-b52d-4f9e8fad8702)
 
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+

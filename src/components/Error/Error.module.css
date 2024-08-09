@@ -1,0 +1,25 @@
+.errorContainer {
+  width: 100%;
+  min-height: 100vh;
+  background: linear-gradient(108deg, #0a092f, rgba(0, 0, 0, 0.6) 99.84%), #000;
+  color: white;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  justify-content: center;
+  align-items: center;
+}
+
+.errorContainer h1 {
+  font-size: 25px;
+  color: white;
+}
+
+.errorContainer button {
+  font-size: 18px;
+  padding: 10px 20px;
+  border-radius: 12px;
+  background-color: rgba(255, 255, 255, 20%);
+  color: white;
+}

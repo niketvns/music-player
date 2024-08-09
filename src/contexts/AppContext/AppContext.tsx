@@ -13,6 +13,7 @@ import { SONGS_API } from "../../utils";
 
 const initialState: GlobalAppState = {
   isLoading: false,
+  error: false,
   songs: [],
   activeSong: null,
   topTrackSongs: false,
@@ -48,7 +49,7 @@ export const AppContextProvider = ({ children }: { children: ReactNode }) => {
 
   const getSongList = useCallback(async () => {
     try {
-      setGlobalAppState((prev) => ({ ...prev, isLoading: true }));
+      setGlobalAppState((prev) => ({ ...prev, isLoading: true, error: false }));
       const apiResponse = await fetch(SONGS_API);
       const songs: { data: ISong[] } = await apiResponse.json();
       const songsWithDuration: ISong[] = await Promise.all(
@@ -73,7 +74,7 @@ export const AppContextProvider = ({ children }: { children: ReactNode }) => {
         activeSong: songsWithDuration[0],
       }));
     } catch (error) {
-      console.log(error);
+      setGlobalAppState((prev) => ({ ...prev, error: true }));
     } finally {
       setGlobalAppState((prev) => ({ ...prev, isLoading: false }));
     }
@@ -91,6 +92,7 @@ export const AppContextProvider = ({ children }: { children: ReactNode }) => {
       handleActiveSong,
       handleTopTrackSongs,
       handleSearch,
+      getSongList,
     };
   }, [
     globalAppState,
@@ -98,6 +100,7 @@ export const AppContextProvider = ({ children }: { children: ReactNode }) => {
     handleActiveSong,
     handleTopTrackSongs,
     handleSearch,
+    getSongList,
   ]);
   return <AppContext.Provider value={value}>{children}</AppContext.Provider>;
 };

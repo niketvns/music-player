@@ -3,6 +3,7 @@ import {ISong} from "../../interfaces/globalInterfaces";
 
 export interface GlobalAppState {
     isLoading: boolean
+    error: boolean
     songs: ISong[]
     activeSong: ISong | null;
     topTrackSongs: boolean;
@@ -16,4 +17,5 @@ export interface IAppContextValue {
     handleActiveSong: (song: ISong) => void;
     handleTopTrackSongs: (topTrackSongs: boolean) => void;
     handleSearch: (searchText: string) => void
+    getSongList: () => void
 }
